@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0B0507258CD1624DF02C4E4C /* Pods_TwitterFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1976E99663540C5909112DED /* Pods_TwitterFeedUITests.framework */; };
 		6591A7D9E1ABF828210EF7EA /* Pods_TwitterFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEB0E15F8F6E888D0CD74F7 /* Pods_TwitterFeedTests.framework */; };
+		764A31BF20A732F800570530 /* TwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31BE20A732F800570530 /* TwitterService.swift */; };
+		764A31C120A7332300570530 /* TwitterAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C020A7332300570530 /* TwitterAPIService.swift */; };
+		764A31C320A7333A00570530 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C220A7333A00570530 /* RESTService.swift */; };
+		764A31C520A7335000570530 /* RESTAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C420A7335000570530 /* RESTAPIService.swift */; };
+		764A31C820A7338000570530 /* EndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C720A7338000570530 /* EndpointService.swift */; };
 		76ECD91320A7319C00AC8F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD91220A7319C00AC8F5D /* AppDelegate.swift */; };
 		76ECD91520A7319C00AC8F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD91420A7319C00AC8F5D /* ViewController.swift */; };
 		76ECD91820A7319C00AC8F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76ECD91620A7319C00AC8F5D /* Main.storyboard */; };
@@ -49,6 +54,11 @@
 		5D5FA577C118000EB4CDA968 /* Pods-TwitterFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedTests/Pods-TwitterFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		629922A4750BD47E0CD283C5 /* Pods-TwitterFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedUITests/Pods-TwitterFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70E40220C2047BB220EC5423 /* Pods-TwitterFeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedUITests/Pods-TwitterFeedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		764A31BE20A732F800570530 /* TwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterService.swift; sourceTree = "<group>"; };
+		764A31C020A7332300570530 /* TwitterAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPIService.swift; sourceTree = "<group>"; };
+		764A31C220A7333A00570530 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
+		764A31C420A7335000570530 /* RESTAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTAPIService.swift; sourceTree = "<group>"; };
+		764A31C720A7338000570530 /* EndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointService.swift; sourceTree = "<group>"; };
 		76ECD90F20A7319C00AC8F5D /* TwitterFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ECD91220A7319C00AC8F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76ECD91420A7319C00AC8F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +121,21 @@
 				1976E99663540C5909112DED /* Pods_TwitterFeedUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		764A31BD20A732C300570530 /* ServiceLocator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLocator;
+			sourceTree = "<group>";
+		};
+		764A31C620A7335900570530 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				764A31C720A7338000570530 /* EndpointService.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 		76ECD90620A7319C00AC8F5D = {
@@ -225,24 +250,30 @@
 		76ECD95320A731F600AC8F5D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				76ECD95420A731F600AC8F5D /* TwitterAPI */,
-				76ECD95520A731F600AC8F5D /* RESTClient */,
+				764A31C620A7335900570530 /* Endpoint */,
+				764A31BD20A732C300570530 /* ServiceLocator */,
+				76ECD95420A731F600AC8F5D /* Twitter */,
+				76ECD95520A731F600AC8F5D /* RESTService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		76ECD95420A731F600AC8F5D /* TwitterAPI */ = {
+		76ECD95420A731F600AC8F5D /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				764A31BE20A732F800570530 /* TwitterService.swift */,
+				764A31C020A7332300570530 /* TwitterAPIService.swift */,
 			);
-			path = TwitterAPI;
+			path = Twitter;
 			sourceTree = "<group>";
 		};
-		76ECD95520A731F600AC8F5D /* RESTClient */ = {
+		76ECD95520A731F600AC8F5D /* RESTService */ = {
 			isa = PBXGroup;
 			children = (
+				764A31C220A7333A00570530 /* RESTService.swift */,
+				764A31C420A7335000570530 /* RESTAPIService.swift */,
 			);
-			path = RESTClient;
+			path = RESTService;
 			sourceTree = "<group>";
 		};
 		8B2DE26C81BCF0E6EA963358 /* Pods */ = {
@@ -453,12 +484,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764A31C520A7335000570530 /* RESTAPIService.swift in Sources */,
+				764A31C120A7332300570530 /* TwitterAPIService.swift in Sources */,
 				76ECD95C20A731F700AC8F5D /* ViperModule.swift in Sources */,
 				76ECD95620A731F700AC8F5D /* TwitRouter.swift in Sources */,
+				764A31BF20A732F800570530 /* TwitterService.swift in Sources */,
 				76ECD91520A7319C00AC8F5D /* ViewController.swift in Sources */,
+				764A31C820A7338000570530 /* EndpointService.swift in Sources */,
 				76ECD91320A7319C00AC8F5D /* AppDelegate.swift in Sources */,
 				76ECD95720A731F700AC8F5D /* TwitProtocols.swift in Sources */,
 				76ECD95A20A731F700AC8F5D /* TwitInteractor.swift in Sources */,
+				764A31C320A7333A00570530 /* RESTService.swift in Sources */,
 				76ECD95920A731F700AC8F5D /* TwitPresenter.swift in Sources */,
 				76ECD95820A731F700AC8F5D /* TwitViewController.swift in Sources */,
 			);
