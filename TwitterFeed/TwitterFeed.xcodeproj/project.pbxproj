@@ -14,6 +14,10 @@
 		764A31C320A7333A00570530 /* RESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C220A7333A00570530 /* RESTService.swift */; };
 		764A31C520A7335000570530 /* RESTAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C420A7335000570530 /* RESTAPIService.swift */; };
 		764A31C820A7338000570530 /* EndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C720A7338000570530 /* EndpointService.swift */; };
+		764A31CA20A733DB00570530 /* Twit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31C920A733DB00570530 /* Twit.swift */; };
+		764A31CC20A733FB00570530 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31CB20A733FB00570530 /* ServiceLocator.swift */; };
+		764A31CE20A734E600570530 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31CD20A734E600570530 /* Services.swift */; };
+		764A31D020A736F200570530 /* ProductionEndpointService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764A31CF20A736F200570530 /* ProductionEndpointService.swift */; };
 		76ECD91320A7319C00AC8F5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD91220A7319C00AC8F5D /* AppDelegate.swift */; };
 		76ECD91520A7319C00AC8F5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECD91420A7319C00AC8F5D /* ViewController.swift */; };
 		76ECD91820A7319C00AC8F5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76ECD91620A7319C00AC8F5D /* Main.storyboard */; };
@@ -59,6 +63,10 @@
 		764A31C220A7333A00570530 /* RESTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTService.swift; sourceTree = "<group>"; };
 		764A31C420A7335000570530 /* RESTAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTAPIService.swift; sourceTree = "<group>"; };
 		764A31C720A7338000570530 /* EndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointService.swift; sourceTree = "<group>"; };
+		764A31C920A733DB00570530 /* Twit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Twit.swift; sourceTree = "<group>"; };
+		764A31CB20A733FB00570530 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		764A31CD20A734E600570530 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		764A31CF20A736F200570530 /* ProductionEndpointService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionEndpointService.swift; sourceTree = "<group>"; };
 		76ECD90F20A7319C00AC8F5D /* TwitterFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76ECD91220A7319C00AC8F5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76ECD91420A7319C00AC8F5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 		764A31BD20A732C300570530 /* ServiceLocator */ = {
 			isa = PBXGroup;
 			children = (
+				764A31CB20A733FB00570530 /* ServiceLocator.swift */,
+				764A31CD20A734E600570530 /* Services.swift */,
 			);
 			path = ServiceLocator;
 			sourceTree = "<group>";
@@ -134,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				764A31C720A7338000570530 /* EndpointService.swift */,
+				764A31CF20A736F200570530 /* ProductionEndpointService.swift */,
 			);
 			path = Endpoint;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 		76ECD94720A731F600AC8F5D /* Twit */ = {
 			isa = PBXGroup;
 			children = (
+				764A31C920A733DB00570530 /* Twit.swift */,
 			);
 			path = Twit;
 			sourceTree = "<group>";
@@ -490,12 +502,16 @@
 				76ECD95620A731F700AC8F5D /* TwitRouter.swift in Sources */,
 				764A31BF20A732F800570530 /* TwitterService.swift in Sources */,
 				76ECD91520A7319C00AC8F5D /* ViewController.swift in Sources */,
+				764A31CC20A733FB00570530 /* ServiceLocator.swift in Sources */,
 				764A31C820A7338000570530 /* EndpointService.swift in Sources */,
+				764A31CA20A733DB00570530 /* Twit.swift in Sources */,
 				76ECD91320A7319C00AC8F5D /* AppDelegate.swift in Sources */,
 				76ECD95720A731F700AC8F5D /* TwitProtocols.swift in Sources */,
 				76ECD95A20A731F700AC8F5D /* TwitInteractor.swift in Sources */,
 				764A31C320A7333A00570530 /* RESTService.swift in Sources */,
+				764A31CE20A734E600570530 /* Services.swift in Sources */,
 				76ECD95920A731F700AC8F5D /* TwitPresenter.swift in Sources */,
+				764A31D020A736F200570530 /* ProductionEndpointService.swift in Sources */,
 				76ECD95820A731F700AC8F5D /* TwitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
