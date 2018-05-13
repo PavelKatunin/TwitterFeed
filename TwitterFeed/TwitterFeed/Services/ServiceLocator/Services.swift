@@ -7,12 +7,16 @@ class Services: ServiceLocator {
     var twitterService: TwitterService
     var endpointService: EndpointService
     
-    var sharedInstance: Services = Services()
+    static private(set) var sharedInstance: ServiceLocator = Services()
     
     init() {
         restService = RESTAPIService()
-        twitterService = TwitterAPIService()
+        twitterService = TwitterAPIService(restService: restService)
         endpointService = ProductionEndpointService()
+    }
+    
+    static func inject(serviceLocator: ServiceLocator) {
+        Services.sharedInstance = serviceLocator
     }
     
 }
