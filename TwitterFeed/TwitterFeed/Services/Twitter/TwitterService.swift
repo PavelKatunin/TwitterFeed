@@ -1,15 +1,12 @@
 import Foundation
 
-protocol TwitsObserver {
-    
-    func service(_ service: TwitterService, didReturnTwits twits: [Twit])
-    
+protocol TweetsObserver {
+    func service(_ service: TwitterService, didReturnTwits tweets: [Tweet])
 }
 
 protocol TwitterService {
-    func getTwits(keyword: String, completion: @escaping () -> Void)
-    func loadTwitsOperation() -> LoadTwitsOperation
-    func startTwitsObserving(forKeyword keyword: String, twitsCountLimit: Int)
-    func add(observer: TwitsObserver)
-    func remove(observer: TwitsObserver)
+    func getTweets(keyword: String, completion: @escaping () -> Void)
+    func startTweetsObserving(forKeyword keyword: String, tweetsCountLimit: Int)
+    func add(observer: TweetsObserver)
+    func remove(observer: TweetsObserver)
 }

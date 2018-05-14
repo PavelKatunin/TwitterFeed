@@ -1,8 +1,8 @@
 import Foundation
 
-enum RESTMethod {
-    case POST
-    case GET
+enum RESTMethod: String {
+    case POST = "POST"
+    case GET = "GET"
 }
 
 protocol RESTService {

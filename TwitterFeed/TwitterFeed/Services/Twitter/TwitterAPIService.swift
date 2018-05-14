@@ -1,31 +1,27 @@
 import Foundation
 
 class TwitterAPIService: TwitterService {
-    
+
     let restService: RESTService
     
     init(restService: RESTService) {
         self.restService = restService
     }
     
-    func getTwits(keyword: String, completion: @escaping () -> Void) {
+    func getTweets(keyword: String, completion: @escaping () -> Void) {
         
     }
     
-    func startTwitsObserving(forKeyword keyword: String, twitsCountLimit: Int) {
+    func startTweetsObserving(forKeyword keyword: String, tweetsCountLimit: Int) {
         
     }
     
-    func add(observer: TwitsObserver) {
+    func add(observer: TweetsObserver) {
         
     }
     
-    func remove(observer: TwitsObserver) {
+    func remove(observer: TweetsObserver) {
         
-    }
-    
-    func loadTwitsOperation() -> LoadTwitsOperation {
-        return LoadTwitsOperation()
     }
     
 }

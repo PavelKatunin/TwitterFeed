@@ -6,7 +6,7 @@ enum MediaContent {
     case link
 }
 
-struct Twit {
+struct Tweet {
     var text: String
     var media: MediaContent
     var timeStamp: Date

@@ -16,6 +16,69 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let cunsomerKey = "izFspU8jhKCcpshf7e0eErcUB"
+        let secretKey = "bjbMFs6M9STal3ZMXU8HF94aqkraxisFMxwvGzMdiInu2tAQb9"
+        let authString = cunsomerKey + ":" + secretKey
+        let authEncoded = authString.toBase64()!
+        
+        
+        let service = RESTAPIService()
+        service.getData(mehtod: .POST,
+                        url: URL(string: "https://api.twitter.com/oauth2/token")!,
+                        headers: [ "Authorization" : "Basic " + authEncoded,
+                                   "Content-Type" : "application/x-www-form-urlencoded;charset=UTF-8"],
+                        parameters: ["grant_type" : "client_credentials" ]) { (result) in
+            
+                            var tokenString = ""
+                            
+                            switch result {
+                            
+                            case .success(let data):
+                                do {
+                                    let string = String(data: data, encoding: .utf8)
+                                    print(string)
+                                    let token = try JSONDecoder().decode(Token.self, from: data)
+                                    print(token.tokenType)
+                                    print(token.accessToken)
+                                    tokenString = token.accessToken
+                                }
+                                catch {
+                                    print("\(error)")
+                                }
+                            case .failure(_):
+                                break
+                            }
+                            
+                            print(tokenString)
+                            print(tokenString.toBase64()!)
+                            let authHeader = "Bearer \(tokenString)"
+                            print(authHeader)
+                            service.getData(mehtod: .POST,
+                                            url: URL(string: "https://stream.twitter.com/1.1/statuses/filter.json")!,
+                                            headers: ["Authorization" : authHeader,
+                                                      "Accept-Encoding" : "gzip",
+                                                      "User-Agent" : "TwitterFeedPK"],
+                                            parameters: ["track" : "twitter"],
+                                            completion: { (result) in
+                                                
+                                                switch result {
+                                                    
+                                                case .success(let data):
+                                                    do {
+                                                        let string = String(data: data, encoding: .utf8)
+                                                        print(string)
+                                                    }
+                                                case .failure(_):
+                                                    break
+                                                }
+                                                
+
+                            })
+                            
+            
+        }
+        
         return true
     }
 

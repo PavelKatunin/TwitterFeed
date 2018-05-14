@@ -1,11 +1,11 @@
 import Foundation
 
-class LoadTwitsOperation {
+class LoadTweetsOperation: RemoteOperation {
     
     //MARK: - input
     var twitsCount: Int = 1
     
     //MARK: - output
-    var result: Result<[Twit]>?
+    var result: Result<[Tweet]>?
     
 }
