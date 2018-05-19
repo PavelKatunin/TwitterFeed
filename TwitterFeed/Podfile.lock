@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: ebf21742dfbedc02cdda5c97db51614f40ec579a
+PODS:
+  - OhhAuth (1.0.0)
+
+DEPENDENCIES:
+  - OhhAuth
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - OhhAuth
+
+SPEC CHECKSUMS:
+  OhhAuth: 82863d7a9aa2a749eb2c65551281c01f3facf501
+
+PODFILE CHECKSUM: bdc8870a5e29e63ac9ab316b278d8c278ff6502b
 
 COCOAPODS: 1.5.0

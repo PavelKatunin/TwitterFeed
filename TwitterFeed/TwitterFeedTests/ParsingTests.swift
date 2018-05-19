@@ -1,7 +1,6 @@
 import XCTest
-@testable import TwitterFeed
 
-class TwitterFeedTests: XCTestCase {
+class ParsingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
