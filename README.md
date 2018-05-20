@@ -34,3 +34,10 @@ so test application doesn't make real HTTP calls to the Twitter API.
 Implemented with EarlGrey iOS framework.
 
 TwitterFeedTests for Unit tests.
+
+# Known issues:
+
+1. Resize tableView when keyboard appears.
+2. More descriptive error messages.
+3. Limit on feeds subscribing.
+4. Some more issues, hey, this is just a test project, it took not so much time.
