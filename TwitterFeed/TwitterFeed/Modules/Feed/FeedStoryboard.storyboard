@@ -19,7 +19,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword for subscription" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-O0-boC">
                                 <rect key="frame" x="16" y="33" width="293" height="30"/>
-                                <accessibility key="accessibilityConfiguration" identifier="keywordTextField"/>
+                                <accessibility key="accessibilityConfiguration" identifier="keywordTextField" label="keywordTextField"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
