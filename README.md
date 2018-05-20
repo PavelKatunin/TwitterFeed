@@ -17,7 +17,7 @@ Developerd using VIPER architecure. https://www.objc.io/issues/13-architecture/v
 
 Built using cocoapods and Swifter library https://github.com/httpswift/swifter
 
-To install the app, open TwitterFeed/TwitterFeed.xcworkspace with xCode
+To install the app, open TwitterFeed/TwitterFeed.xcworkspace with Xcode
 
 # Build: 
 
@@ -25,7 +25,7 @@ choose TwitterFeed target and click Run button (Cmd + R)
 
 # Test:
 
-to run tests open xCode -> Product -> Test (Cmd + U)
+to run tests open Xcode -> Product -> Test (Cmd + U)
 
 There are 2 test targets: Unit tests and Integration tests.
 
