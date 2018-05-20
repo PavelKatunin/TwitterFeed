@@ -8,7 +8,7 @@ struct User: Codable {
         case screenName = "screen_name"
     }
     
-    var profileImageUrl: URL?
+    var profileImageUrl: String?
     var screenName: String?
     
 }

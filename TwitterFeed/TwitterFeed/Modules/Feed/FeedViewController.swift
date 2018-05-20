@@ -2,7 +2,8 @@ import UIKit
 
 final class FeedViewController: UIViewController,
                                 FeedViewProtocol,
-                                UITableViewDataSource {
+                                UITableViewDataSource,
+                                UITableViewDelegate {
 
 	var presenter: FeedViewPresenter!
     
@@ -16,7 +17,7 @@ final class FeedViewController: UIViewController,
 	override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableView.register(TweetTableViewCell.self, forCellReuseIdentifier: cellId)
     }
     
     @IBAction func goButtonTapped(_ sender: UIButton) {
@@ -38,7 +39,9 @@ final class FeedViewController: UIViewController,
                                       message: text,
                                       preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"),
+                                      style: .default,
+                                      handler: { _ in
             
         }))
         
@@ -52,8 +55,8 @@ final class FeedViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = tweets[indexPath.row].text
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! TweetTableViewCell
+        cell.tweet = tweets[indexPath.row]
         return cell
     }
 

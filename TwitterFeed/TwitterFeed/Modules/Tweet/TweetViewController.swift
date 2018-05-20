@@ -1,11 +1,6 @@
 import UIKit
 
 final class TweetViewController: UIViewController, TweetViewProtocol {
-
-    static func estimatedHeightFor(width: CGFloat) -> CGFloat {
-        //TODO: Fix
-        return 100
-    }
     
 	var presenter: TweetViewPresenter!
     
@@ -22,14 +17,24 @@ final class TweetViewController: UIViewController, TweetViewProtocol {
         }
     }
     
+    var userImage: UIImage? {
+        didSet {
+            if isViewLoaded {
+                updateUiFor(tweet: tweet)
+            }
+        }
+    }
+    
     private func updateUiFor(tweet: Tweet?) {
         textLabel.text = tweet?.text ?? ""
         nameLabel.text = tweet?.user?.screenName ?? ""
+        profileImageView.image = userImage
     }
     
 	override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
+        updateUiFor(tweet: tweet)
     }
 
 }

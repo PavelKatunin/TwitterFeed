@@ -1,0 +1,26 @@
+[
+ {
+    "text" : "Some art tweet, much wow! 'Blue Creek Bridge' by Frank Baggett. 💝",
+    "timestamp_ms" : "123123123",
+    "user" : {
+        "screen_name" : "dogoOfArt",
+        "profile_image_url_https" : "https://dogo.com/artdogo.png"
+    }
+ },
+ {
+ "text" : "🔥 Some art tweet, much wow! Every child is an artist. The problem is how to remain an artist once we grow up.",
+ "timestamp_ms" : "123123123",
+    "user" : {
+        "screen_name" : "dogoOfArt",
+        "profile_image_url_https" : "https://dogo.com/artdogo.png"
+    }
+ }
+ , {
+ "text" : "Some art tweet, much wow! Painting is easy when you don’t know how, but very difficult when you do",
+ "timestamp_ms" : "123123123",
+ "user" : {
+ "screen_name" : "dogoOfArt",
+ "profile_image_url_https" : "https://dogo.com/artdogo.png"
+ }
+ }
+ ]

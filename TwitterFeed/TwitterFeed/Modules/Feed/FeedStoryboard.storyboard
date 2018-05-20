@@ -19,12 +19,14 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword for subscription" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-O0-boC">
                                 <rect key="frame" x="16" y="33" width="293" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="keywordTextField"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76g-fr-8UB">
                                 <rect key="frame" x="317" y="32" width="50" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="goButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="n7C-aq-ZE2"/>
                                 </constraints>
@@ -38,6 +40,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="jkC-TI-xGy" id="Vf7-Eh-Pd9"/>
+                                    <outlet property="delegate" destination="jkC-TI-xGy" id="hjQ-wn-xPi"/>
                                 </connections>
                             </tableView>
                         </subviews>
