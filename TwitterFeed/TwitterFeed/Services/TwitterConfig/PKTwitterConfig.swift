@@ -4,25 +4,25 @@ struct PKTwitterConfig: TwitterConfig {
     
     var consumerKey: String {
         get {
-            return ""
+            return "izFspU8jhKCcpshf7e0eErcUB"
         }
     }
     
     var consumerSecretKey: String {
         get {
-            return ""
+            return "bjbMFs6M9STal3ZMXU8HF94aqkraxisFMxwvGzMdiInu2tAQb9"
         }
     }
     
     var userAccessToken: String {
         get {
-            return ""
+            return "398557922-ku8ABbhF6eN1qEn1MbPPvj5o7nOpLkRZdGa1iybc"
         }
     }
     
     var userAccessTokenSecret: String {
         get {
-            return ""
+            return "kx5AAga81ASgx4c71OaegnYxZkw6Tr9C2jOsIliIjRM2X"
         }
     }
     

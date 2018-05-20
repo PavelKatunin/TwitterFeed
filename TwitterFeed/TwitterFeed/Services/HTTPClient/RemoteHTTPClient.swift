@@ -24,7 +24,10 @@ class RemoteHTTPClient: HTTPClient {
                 result = .failure(HTTPClientError.unknownHTTPError)
             }
             
-            completion(result)
+            DispatchQueue.main.async {
+                completion(result)
+            }
+            
         }.resume()
     }
     
