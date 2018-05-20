@@ -1,0 +1,20 @@
+PODS:
+  - EarlGrey (1.13.0)
+  - OhhAuth (1.0.0)
+
+DEPENDENCIES:
+  - EarlGrey
+  - OhhAuth
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - EarlGrey
+    - OhhAuth
+
+SPEC CHECKSUMS:
+  EarlGrey: 9c50bc1f8e47e361dc2fe2053288bdcaebf9a3e5
+  OhhAuth: 82863d7a9aa2a749eb2c65551281c01f3facf501
+
+PODFILE CHECKSUM: 4e30bbc9ac98b775cc8c8a837d8b43658a7d5bf7
+
+COCOAPODS: 1.5.0

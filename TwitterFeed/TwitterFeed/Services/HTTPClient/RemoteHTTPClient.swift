@@ -16,6 +16,7 @@ class RemoteHTTPClient: HTTPClient {
                     result = .success(data)
                 }
                 catch {
+                    print(error)
                     result = .failure(error)
                 }
             }
