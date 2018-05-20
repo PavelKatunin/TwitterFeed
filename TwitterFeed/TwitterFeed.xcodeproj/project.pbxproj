@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B0507258CD1624DF02C4E4C /* Pods_TwitterFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1976E99663540C5909112DED /* Pods_TwitterFeedUITests.framework */; };
 		6591A7D9E1ABF828210EF7EA /* Pods_TwitterFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEB0E15F8F6E888D0CD74F7 /* Pods_TwitterFeedTests.framework */; };
+		7613C21B20B1FDD60080F205 /* testGoogleTweets.json in Resources */ = {isa = PBXBuildFile; fileRef = 7613C21A20B1FDD60080F205 /* testGoogleTweets.json */; };
 		7631C46020B086BE00BFF1DE /* TweetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7631C45A20B086BE00BFF1DE /* TweetPresenter.swift */; };
 		7631C46120B086BE00BFF1DE /* TweetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7631C45B20B086BE00BFF1DE /* TweetRouter.swift */; };
 		7631C46220B086BE00BFF1DE /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7631C45C20B086BE00BFF1DE /* TweetViewController.swift */; };
@@ -43,7 +44,6 @@
 		76A9E6DA20B1A18D0004B17F /* RemoteHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E6D920B1A18D0004B17F /* RemoteHTTPClient.swift */; };
 		76A9E6DE20B1A4930004B17F /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E6DD20B1A4930004B17F /* UIView+Layout.swift */; };
 		76A9E6E020B1A54D0004B17F /* NSLayoutConstraint+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E6DF20B1A54C0004B17F /* NSLayoutConstraint+Array.swift */; };
-		76A9E6E220B1A5CC0004B17F /* FeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E6E120B1A5CC0004B17F /* FeedInteractorTests.swift */; };
 		76A9E70D20B1B3360004B17F /* TweeterFeedIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E70C20B1B3360004B17F /* TweeterFeedIntegrationTests.swift */; };
 		76A9E70F20B1B4F10004B17F /* EarlGrey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E70E20B1B4F10004B17F /* EarlGrey.swift */; };
 		76A9E71020B1BE860004B17F /* IntegrationTestsServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A9E6CD20B104640004B17F /* IntegrationTestsServiceLocator.swift */; };
@@ -110,6 +110,7 @@
 		5D5FA577C118000EB4CDA968 /* Pods-TwitterFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedTests/Pods-TwitterFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
 		629922A4750BD47E0CD283C5 /* Pods-TwitterFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedUITests/Pods-TwitterFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		70E40220C2047BB220EC5423 /* Pods-TwitterFeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterFeedUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterFeedUITests/Pods-TwitterFeedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7613C21A20B1FDD60080F205 /* testGoogleTweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testGoogleTweets.json; sourceTree = "<group>"; };
 		7631C45A20B086BE00BFF1DE /* TweetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetPresenter.swift; sourceTree = "<group>"; };
 		7631C45B20B086BE00BFF1DE /* TweetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRouter.swift; sourceTree = "<group>"; };
 		7631C45C20B086BE00BFF1DE /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		76A9E6DB20B1A1BC0004B17F /* IntegrationTestsHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationTestsHTTPClient.swift; sourceTree = "<group>"; };
 		76A9E6DD20B1A4930004B17F /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		76A9E6DF20B1A54C0004B17F /* NSLayoutConstraint+Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+Array.swift"; sourceTree = "<group>"; };
-		76A9E6E120B1A5CC0004B17F /* FeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorTests.swift; sourceTree = "<group>"; };
 		76A9E6E420B1A7AD0004B17F /* googleTweets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = googleTweets.json; sourceTree = "<group>"; };
 		76A9E6E620B1A7BC0004B17F /* artTweets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = artTweets.json; sourceTree = "<group>"; };
 		76A9E6FA20B1ADC80004B17F /* TwitterFeedIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterFeedIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,9 +407,9 @@
 		76ECD92620A7319C00AC8F5D /* TwitterFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				7613C21A20B1FDD60080F205 /* testGoogleTweets.json */,
 				76ECD92920A7319C00AC8F5D /* Info.plist */,
 				7631C47620B0CF0C00BFF1DE /* ParsingTests.swift */,
-				76A9E6E120B1A5CC0004B17F /* FeedInteractorTests.swift */,
 			);
 			path = TwitterFeedTests;
 			sourceTree = "<group>";
@@ -675,6 +675,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7613C21B20B1FDD60080F205 /* testGoogleTweets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,7 +855,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76A9E6E220B1A5CC0004B17F /* FeedInteractorTests.swift in Sources */,
 				7631C47720B0CF0C00BFF1DE /* ParsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
