@@ -41,3 +41,4 @@ TwitterFeedTests for Unit tests.
 2. More descriptive error messages.
 3. Limit on feeds subscribing.
 4. Some more issues, hey, this is just a test project, it took not so much time.
+5. Sizing of UITableViewCells
