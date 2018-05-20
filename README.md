@@ -10,7 +10,7 @@ You need to register a new app and generate 4 strings: Keys and Access tokens ta
 
 # Description
 
-![alt text](https://user-images.githubusercontent.com/1636737/40282030-6e52a4f6-5c71-11e8-9db7-86e8fd1f5ec5.gif)
+![alt text](https://user-images.githubusercontent.com/1636737/40282166-cd9689e4-5c73-11e8-875c-9cfc8824d7a4.gif)
 
 Twitter client that uses Twitter API to stream tweets by a keyword.
 Developerd using VIPER arhitecure. https://www.objc.io/issues/13-architecture/viper/
