@@ -1,6 +1,15 @@
 # TwitterFeed
 Twitter feed
 
+# Warning
+To make the project working, change strings in PKTwitterConfig.swift file,
+or implement your own class which confims to the TwitterConfig protocol.
+To get all needed keys check out https://apps.twitter.com/
+
+You need to register a new app and generate 4 strings: Keys and Access tokens tab.
+
+# Description
+
 ![alt text](https://user-images.githubusercontent.com/1636737/40282030-6e52a4f6-5c71-11e8-9db7-86e8fd1f5ec5.gif)
 
 Twitter client that uses Twitter API to stream tweets by a keyword.
