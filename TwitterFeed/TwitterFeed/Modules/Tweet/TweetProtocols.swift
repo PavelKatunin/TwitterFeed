@@ -1,12 +1,3 @@
-//
-//  TweetProtocols.swift
-//  TwitterFeed
-//
-//  Created Pavel Katunin on 5/19/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-//
-
 import Foundation
 
 // MARK: - Wireframe
@@ -37,6 +28,7 @@ protocol TweetInteractorProtocol: class {
 
 protocol TweetViewProtocol: class {
     var title: String? { set get }
+    var tweet: Tweet? { set get }
 }
 
 // MARK: - IO

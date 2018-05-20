@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  TwitterFeed
-//
-//  Created by Pavel Katunin on 5/12/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-
 import UIKit
 import OhhAuth
 
@@ -17,8 +9,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        Services.sharedInstance.twitterService.startTweetsObserving(forKeyword: "google",
-                                                                    tweetsCountLimit: 1)
+        do {
+            let rootModule = try FeedRouter.createModule()
+            let navigationController = UINavigationController(rootViewController: rootModule.view)
+            window?.rootViewController = navigationController
+        }
+        catch {
+            fatalError("Cannot create the root module")
+        }
         
         return true
     }

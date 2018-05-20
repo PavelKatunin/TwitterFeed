@@ -3,6 +3,7 @@ import Foundation
 protocol TweetsObserver {
     
     func service(_ service: TwitterService, didReturnTweets tweets: [Tweet])
+    func service(_ service: TwitterService, didReturnError error: Error)
     
 }
 
