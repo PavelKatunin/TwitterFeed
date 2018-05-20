@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Feed View Controller-->
+        <scene sceneID="M3K-p2-IHg">
+            <objects>
+                <viewController storyboardIdentifier="FeedViewController" id="jkC-TI-xGy" customClass="FeedViewController" customModule="TwitterFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7i-VR-IOh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keyword for subscription" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8kd-O0-boC">
+                                <rect key="frame" x="16" y="33" width="293" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="keywordTextField"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76g-fr-8UB">
+                                <rect key="frame" x="317" y="32" width="50" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="goButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="n7C-aq-ZE2"/>
+                                </constraints>
+                                <state key="normal" title="Go!"/>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="jkC-TI-xGy" eventType="touchUpInside" id="0Ny-bt-HDe"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fQl-HH-neO">
+                                <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jkC-TI-xGy" id="Vf7-Eh-Pd9"/>
+                                    <outlet property="delegate" destination="jkC-TI-xGy" id="hjQ-wn-xPi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8kd-O0-boC" firstAttribute="leading" secondItem="bHZ-WF-qfQ" secondAttribute="leading" constant="16" id="DBT-Bb-fNn"/>
+                            <constraint firstItem="76g-fr-8UB" firstAttribute="leading" secondItem="8kd-O0-boC" secondAttribute="trailing" constant="8" id="HIl-4V-jG6"/>
+                            <constraint firstItem="fQl-HH-neO" firstAttribute="trailing" secondItem="bHZ-WF-qfQ" secondAttribute="trailing" id="Jfv-HQ-met"/>
+                            <constraint firstItem="fQl-HH-neO" firstAttribute="top" secondItem="8kd-O0-boC" secondAttribute="bottom" id="RwT-SZ-HdI"/>
+                            <constraint firstItem="bHZ-WF-qfQ" firstAttribute="trailing" secondItem="76g-fr-8UB" secondAttribute="trailing" constant="8" id="UKS-E3-OZM"/>
+                            <constraint firstItem="fQl-HH-neO" firstAttribute="bottom" secondItem="bHZ-WF-qfQ" secondAttribute="bottom" id="dNK-aq-1ZB"/>
+                            <constraint firstItem="8kd-O0-boC" firstAttribute="top" secondItem="bHZ-WF-qfQ" secondAttribute="top" constant="13" id="foh-yk-glE"/>
+                            <constraint firstItem="fQl-HH-neO" firstAttribute="leading" secondItem="bHZ-WF-qfQ" secondAttribute="leading" id="g2V-1O-KUd"/>
+                            <constraint firstItem="76g-fr-8UB" firstAttribute="baseline" secondItem="8kd-O0-boC" secondAttribute="baseline" id="wLi-AO-2WP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bHZ-WF-qfQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="keywordTextfield" destination="8kd-O0-boC" id="h9b-SG-LF7"/>
+                        <outlet property="tableView" destination="fQl-HH-neO" id="vNJ-nQ-1cA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4D-CV-Vy8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-122.40000000000001" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+</document>

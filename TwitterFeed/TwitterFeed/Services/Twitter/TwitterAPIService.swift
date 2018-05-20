@@ -7,6 +7,20 @@ class TwitterAPIService: TwitterService {
     let twitterConfig: TwitterConfig    
     let swifter: Swifter
     var tweetsObservingRequest: HTTPRequest?
+    // TODO: make weak, refactor observing
+    var observers = [TweetsObserver]()
+    
+    func stopTweetsObserving() {
+        tweetsObservingRequest?.stop()
+    }
+    
+    func add(observer: TweetsObserver) {
+        observers.append(observer)
+    }
+    
+    func remove(observer: TweetsObserver) {
+        //TODO: implement
+    }
     
     init(twitterConfig: TwitterConfig) {
         self.twitterConfig = twitterConfig
@@ -26,36 +40,47 @@ class TwitterAPIService: TwitterService {
                                                          },
                                                           stallWarningHandler: nil)
                                                           { (error) in
-                                                            //TODO: handle error
+                                                            print(error)
+                                                            
+                                                            self.notifyObserversAbout(error: error)
+                                                            
                                                           }
         tweetsObservingRequest?.start()
     }
     
-    func tweetsJsonReceived(_ json: JSON) {
+    private func tweetsJsonReceived(_ json: JSON) {
         let tweets = createTweetsFrom(json: json)
         notifyObserversAbout(tweets: tweets)
     }
     
-    func createTweetsFrom(json: JSON) -> [Tweet] {
+    private func createTweetsFrom(json: JSON) -> [Tweet] {
         print(json.description)
         
-        return [Tweet]()
-    }
-    
-    func notifyObserversAbout(tweets: [Tweet]) {
+        var tweets = [Tweet]()
         
+        if let jsonData = json.description.data(using: .utf8) {
+            do {
+                let tweet = try JSONDecoder().decode(Tweet.self, from: jsonData)
+                tweets.append(tweet)
+            }
+            catch {
+                print(error)
+            }
+        }
+
+        return tweets
     }
     
-    func stopTweetsObserving() {
-        tweetsObservingRequest?.stop()
+    private func notifyObserversAbout(tweets: [Tweet]) {
+        observers.forEach { (observer) in
+            observer.service(self, didReturnTweets: tweets)
+        }
     }
     
-    func add(observer: TweetsObserver) {
-        
-    }
-    
-    func remove(observer: TweetsObserver) {
-        
+    private func notifyObserversAbout(error: Error) {
+        observers.forEach { (observer) in
+            observer.service(self, didReturnError: error)
+        }
     }
     
 }

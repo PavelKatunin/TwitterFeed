@@ -16,12 +16,27 @@ final class FeedPresenter {
 }
 
 extension FeedPresenter: FeedViewPresenter {
+    
+    func didEnter(keyword: String) {
+        interactor.observeTweetsFor(keyword: keyword)
+        view?.resetTweets()
+    }
+    
     func viewLoaded() {
         view?.title = "Feed"
     }
+    
 }
 
 extension FeedPresenter: FeedInteractorPresenter {
+    
+    func didReceive(tweets: [Tweet]) {
+        view.add(tweets: tweets)
+    }
+    
+    func didReceive(error: Error) {
+        view.showError(text: error.localizedDescription)
+    }
     
 }
 

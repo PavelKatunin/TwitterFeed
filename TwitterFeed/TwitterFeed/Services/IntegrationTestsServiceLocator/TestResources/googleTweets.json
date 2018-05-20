@@ -1,0 +1,26 @@
+[
+ {
+    "text" : "Some google tweet, much wow! 🤓 The most exciting tweet abou IT technologies!",
+    "timestamp_ms" : "123123123",
+    "user" : {
+        "screen_name" : "ITDogo",
+        "profile_image_url_https" : "https://dogo.com/dogo.png"
+    }
+ },
+ {
+    "text" : "Some google tweet, much wow! Some text about AI or something.",
+    "timestamp_ms" : "123123123",
+    "user" : {
+        "screen_name" : "ITDogo",
+        "profile_image_url_https" : "https://dogo.com/dogo.png"
+    }
+ },
+ {
+ "text" : "Some google tweet, much wow! Don't be evil! 🔥",
+ "timestamp_ms" : "123123123",
+    "user" : {
+        "screen_name" : "SomeCoolDogo",
+        "profile_image_url_https" : "https://dogo.com/dogo.png"
+    }
+ }
+]

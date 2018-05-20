@@ -1,21 +1,40 @@
-//
-//  TweetViewController.swift
-//  TwitterFeed
-//
-//  Created Pavel Katunin on 5/19/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-//
-
 import UIKit
 
 final class TweetViewController: UIViewController, TweetViewProtocol {
-
+    
 	var presenter: TweetViewPresenter!
-
+    
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var additionalActionsButton: UIButton!
+    
+    var tweet: Tweet? {
+        didSet {
+            if isViewLoaded {
+                updateUiFor(tweet: tweet)
+            }
+        }
+    }
+    
+    var userImage: UIImage? {
+        didSet {
+            if isViewLoaded {
+                updateUiFor(tweet: tweet)
+            }
+        }
+    }
+    
+    private func updateUiFor(tweet: Tweet?) {
+        textLabel.text = tweet?.text ?? ""
+        nameLabel.text = tweet?.user?.screenName ?? ""
+        profileImageView.image = userImage
+    }
+    
 	override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewLoaded()
+        updateUiFor(tweet: tweet)
     }
 
 }

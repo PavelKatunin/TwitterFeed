@@ -1,5 +1,6 @@
 import Foundation
 
+//WARINING: SETUP YOUR CONFIG
 struct PKTwitterConfig: TwitterConfig {
     
     var consumerKey: String {
