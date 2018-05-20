@@ -13,7 +13,7 @@ You need to register a new app and generate 4 strings: Keys and Access tokens ta
 ![alt text](https://user-images.githubusercontent.com/1636737/40282166-cd9689e4-5c73-11e8-875c-9cfc8824d7a4.gif)
 
 Twitter client that uses Twitter API to stream tweets by a keyword.
-Developerd using VIPER arhitecure. https://www.objc.io/issues/13-architecture/viper/
+Developerd using VIPER architecure. https://www.objc.io/issues/13-architecture/viper/
 
 Built using cocoapods and Swifter library https://github.com/httpswift/swifter
 
@@ -41,3 +41,4 @@ TwitterFeedTests for Unit tests.
 2. More descriptive error messages.
 3. Limit on feeds subscribing.
 4. Some more issues, hey, this is just a test project, it took not so much time.
+5. Sizing of UITableViewCells
