@@ -8,11 +8,11 @@ Built using cocoapods and Swifter library https://github.com/httpswift/swifter
 
 To install the app, open TwitterFeed/TwitterFeed.xcworkspace with xCode
 
-Build: 
+# Build: 
 
 choose TwitterFeed target and click Run button (Cmd + R)
 
-Test:
+# Test:
 
 to run tests open xCode -> Product -> Test (Cmd + U)
 
