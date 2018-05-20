@@ -14,8 +14,8 @@ class TweeterFeedIntegrationTests: XCTestCase {
     }
     
     func testChangingKeywords() {
-        let typeGoogleAction = GREYActions.action(forTypeText: "google")
-        EarlGrey.selectElement(with: grey_accessibilityID("keywordTextField")).perform(typeGoogleAction)
+        let typeGoogleAction = grey_replaceText("google")
+        EarlGrey.selectElement(with: grey_accessibilityLabel("keywordTextField")).perform(typeGoogleAction)
         EarlGrey.selectElement(with: grey_accessibilityID("goButton")).perform(GREYActions.actionForTap())
         IntegrationTestsTwitterService.sharedInstance.pushNextTweet()
         RunLoop.current.run(until: Date(timeInterval: 2, since: Date()))
@@ -24,10 +24,10 @@ class TweeterFeedIntegrationTests: XCTestCase {
         IntegrationTestsTwitterService.sharedInstance.pushNextTweet()
         RunLoop.current.run(until: Date(timeInterval: 2, since: Date()))
         
-        EarlGrey.selectElement(with: grey_accessibilityID("keywordTextField")).perform(GREYActions.actionForClearText())
+        EarlGrey.selectElement(with: grey_accessibilityLabel("keywordTextField")).perform(GREYActions.actionForClearText())
         
-        let typeArtAction = GREYActions.action(forTypeText: "art")
-        EarlGrey.selectElement(with: grey_accessibilityID("keywordTextField")).perform(typeArtAction)
+        let typeArtAction = grey_replaceText("art")
+        EarlGrey.selectElement(with: grey_accessibilityLabel("keywordTextField")).perform(typeArtAction)
         EarlGrey.selectElement(with: grey_accessibilityID("goButton")).perform(GREYActions.actionForTap())
         IntegrationTestsTwitterService.sharedInstance.pushNextTweet()
         RunLoop.current.run(until: Date(timeInterval: 2, since: Date()))
