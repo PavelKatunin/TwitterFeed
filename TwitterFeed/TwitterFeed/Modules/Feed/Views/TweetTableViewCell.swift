@@ -38,7 +38,8 @@ class TweetTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-    
+        super.prepareForReuse()
+        tweetViewController.tweet = nil
     }
     
 }
