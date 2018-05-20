@@ -25,7 +25,7 @@ class RemoteHTTPClient: HTTPClient {
             }
             
             completion(result)
-        }
+        }.resume()
     }
     
 }

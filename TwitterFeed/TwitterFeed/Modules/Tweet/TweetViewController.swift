@@ -28,7 +28,14 @@ final class TweetViewController: UIViewController, TweetViewProtocol {
     private func updateUiFor(tweet: Tweet?) {
         textLabel.text = tweet?.text ?? ""
         nameLabel.text = tweet?.user?.screenName ?? ""
-        profileImageView.image = userImage
+        
+        if tweet != nil {
+            profileImageView.image = userImage
+        }
+        else {
+            profileImageView.image = nil
+        }
+        
     }
     
 	override func viewDidLoad() {
